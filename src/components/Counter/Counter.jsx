@@ -24,6 +24,7 @@ function isPrime(number) {
 }
 
 const Counter = memo(function Counter({ initialCount }) {
+  console.log("initialCount: ", initialCount);
   log("<Counter /> rendered", 1);
   const initialCountIsPrime = isPrime(initialCount);
 
