@@ -19,7 +19,10 @@ function App() {
       <Header />
       <main>
         <ConfigureCounter onSet={handleSetCount} />
-        <Counter initialCount={chosenCount} />
+        {/* Adding the key here is forcing to throw away and to add a brand new
+        Counter component //every time the chosenCount state has changed */}
+        <Counter key={chosenCount} initialCount={chosenCount} />
+        <Counter initialCount={1} />
       </main>
     </>
   );
